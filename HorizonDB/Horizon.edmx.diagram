@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a746b5e6e96e46b5927440735a0fe36f" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="horizonDBModel.Aircraft_Flight" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.Aircraft" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.AircraftSeating" Width="1.5" PointX="9.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.Airport" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.Booking" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.Client" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.Flight" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.FlightStatu" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.Pathway" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.Schedule" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.SeatingPrice" Width="1.5" PointX="7.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.sysdiagram" Width="1.5" PointX="9.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="horizonDBModel.TravelClass" Width="1.5" PointX="7.5" PointY="15.5" IsExpanded="true" />
+        <AssociationConnector Association="horizonDBModel.FK_Aircraft_Flight_Aircrafts" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Aircraft_Flight_Flights" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_AircraftSeating_Aircrafts" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Booking_Aircrafts" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_SeatingPrice_Aircrafts" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_AircraftSeating_SeatingPrice" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_AircraftSeating_TravelClass" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Airports_Pathway" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Clients_Airports" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Booking_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Booking_Flights" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Booking_SeatingPrice" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Flights_FlightStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Flights_Schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_SeatingPrice_Flights" ManuallyRouted="false" />
+        <AssociationConnector Association="horizonDBModel.FK_Schedule_Pathway" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
