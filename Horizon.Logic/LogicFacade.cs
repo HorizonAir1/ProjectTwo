@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Horizon.Logic
 {
-    public class Class1
+    public class LogicFacade
     {
     }
 }
