@@ -1,1 +1,12 @@
 E:\Revature\ProjectTwo\ProjectTwo\Horizon.Logic\obj\Debug\Horizon.Logic.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\bin\Debug\Horizon.Logic.dll
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\bin\Debug\Horizon.Logic.pdb
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\bin\Debug\HorizonDB.dll
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\bin\Debug\EntityFramework.dll
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\bin\Debug\HorizonDB.pdb
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\bin\Debug\HorizonDB.dll.config
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\bin\Debug\EntityFramework.xml
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\obj\Debug\Horizon.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\obj\Debug\Horizon.Logic.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\obj\Debug\Horizon.Logic.dll
+C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\obj\Debug\Horizon.Logic.pdb
