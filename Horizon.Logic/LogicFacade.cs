@@ -1,5 +1,4 @@
-﻿using Horizon.Logic.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +28,7 @@ namespace Horizon.Logic
       throw new NotImplementedException();
     }
 
-    public bool RegisterToFlight(ICustomer customer, string flightId)
+    public bool RegisterToFlight(Passenger passenger, string flightId)
     {
       throw new NotImplementedException();
     }
