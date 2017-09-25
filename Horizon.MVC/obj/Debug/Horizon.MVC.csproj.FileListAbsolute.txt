@@ -1,0 +1,2 @@
+E:\Revature\ProjectTwo\ProjectTwo\Horizon.MVC\obj\Debug\Horizon.MVC.csprojResolveAssemblyReference.cache
+E:\Revature\ProjectTwo\ProjectTwo\Horizon.MVC\obj\Debug\Horizon.MVC.csproj.CoreCompileInputs.cache

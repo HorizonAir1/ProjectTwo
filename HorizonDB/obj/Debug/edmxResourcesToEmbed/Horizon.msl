@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="horizonDBModelStoreContainer" CdmEntityContainer="horizonDBEntity">
+    <EntitySetMapping Name="Aircraft_Flight">
+      <EntityTypeMapping TypeName="horizonDBModel.Aircraft_Flight">
+        <MappingFragment StoreEntitySet="Aircraft_Flight">
+          <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+          <ScalarProperty Name="aircraft_id" ColumnName="aircraft_id" />
+          <ScalarProperty Name="AFRef" ColumnName="AFRef" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aircrafts">
+      <EntityTypeMapping TypeName="horizonDBModel.Aircraft">
+        <MappingFragment StoreEntitySet="Aircrafts">
+          <ScalarProperty Name="aircraft_id" ColumnName="aircraft_id" />
+          <ScalarProperty Name="model" ColumnName="model" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AircraftSeatings">
+      <EntityTypeMapping TypeName="horizonDBModel.AircraftSeating">
+        <MappingFragment StoreEntitySet="AircraftSeating">
+          <ScalarProperty Name="aircraft_id" ColumnName="aircraft_id" />
+          <ScalarProperty Name="seat_id" ColumnName="seat_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="SeatRef" ColumnName="SeatRef" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Airports">
+      <EntityTypeMapping TypeName="horizonDBModel.Airport">
+        <MappingFragment StoreEntitySet="Airports">
+          <ScalarProperty Name="airport_id" ColumnName="airport_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="pathway_id" ColumnName="pathway_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="horizonDBModel.Booking">
+        <MappingFragment StoreEntitySet="Booking">
+          <ScalarProperty Name="booking_id" ColumnName="booking_id" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+          <ScalarProperty Name="aircraft_id" ColumnName="aircraft_id" />
+          <ScalarProperty Name="seat_id" ColumnName="seat_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="horizonDBModel.Client">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="middle" ColumnName="middle" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="passport" ColumnName="passport" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="airport_id" ColumnName="airport_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flights">
+      <EntityTypeMapping TypeName="horizonDBModel.Flight">
+        <MappingFragment StoreEntitySet="Flights">
+          <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+          <ScalarProperty Name="schedule_id" ColumnName="schedule_id" />
+          <ScalarProperty Name="flight_status" ColumnName="flight_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlightStatus">
+      <EntityTypeMapping TypeName="horizonDBModel.FlightStatu">
+        <MappingFragment StoreEntitySet="FlightStatus">
+          <ScalarProperty Name="flight_status" ColumnName="flight_status" />
+          <ScalarProperty Name="flight_status_desc" ColumnName="flight_status_desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pathways">
+      <EntityTypeMapping TypeName="horizonDBModel.Pathway">
+        <MappingFragment StoreEntitySet="Pathway">
+          <ScalarProperty Name="pathway_id" ColumnName="pathway_id" />
+          <ScalarProperty Name="origin_id" ColumnName="origin_id" />
+          <ScalarProperty Name="dest_id" ColumnName="dest_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedules">
+      <EntityTypeMapping TypeName="horizonDBModel.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="schedule_id" ColumnName="schedule_id" />
+          <ScalarProperty Name="t_arrive" ColumnName="t_arrive" />
+          <ScalarProperty Name="t_depart" ColumnName="t_depart" />
+          <ScalarProperty Name="pathway_id" ColumnName="pathway_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeatingPrices">
+      <EntityTypeMapping TypeName="horizonDBModel.SeatingPrice">
+        <MappingFragment StoreEntitySet="SeatingPrice">
+          <ScalarProperty Name="seat_id" ColumnName="seat_id" />
+          <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+          <ScalarProperty Name="aircraft_id" ColumnName="aircraft_id" />
+          <ScalarProperty Name="price_bit" ColumnName="price_bit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="horizonDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TravelClasses">
+      <EntityTypeMapping TypeName="horizonDBModel.TravelClass">
+        <MappingFragment StoreEntitySet="TravelClass">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="descript" ColumnName="descript" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

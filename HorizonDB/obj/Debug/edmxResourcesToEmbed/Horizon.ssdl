@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="horizonDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Aircraft_Flight">
+    <Key>
+      <PropertyRef Name="AFRef" />
+    </Key>
+    <Property Name="flight_id" Type="bigint" Nullable="false" />
+    <Property Name="aircraft_id" Type="bigint" Nullable="false" />
+    <Property Name="AFRef" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aircrafts">
+    <Key>
+      <PropertyRef Name="aircraft_id" />
+    </Key>
+    <Property Name="aircraft_id" Type="bigint" Nullable="false" />
+    <Property Name="model" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AircraftSeating">
+    <Key>
+      <PropertyRef Name="SeatRef" />
+    </Key>
+    <Property Name="aircraft_id" Type="bigint" Nullable="false" />
+    <Property Name="seat_id" Type="bigint" Nullable="false" />
+    <Property Name="class_id" Type="int" Nullable="false" />
+    <Property Name="SeatRef" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Airports">
+    <Key>
+      <PropertyRef Name="airport_id" />
+    </Key>
+    <Property Name="airport_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="pathway_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Booking">
+    <Key>
+      <PropertyRef Name="booking_id" />
+    </Key>
+    <Property Name="booking_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="client_id" Type="bigint" Nullable="false" />
+    <Property Name="flight_id" Type="bigint" Nullable="false" />
+    <Property Name="aircraft_id" Type="bigint" Nullable="false" />
+    <Property Name="seat_id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="client_id" />
+    </Key>
+    <Property Name="client_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="middle" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="passport" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="airport_id" Type="char" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Flights">
+    <Key>
+      <PropertyRef Name="flight_id" />
+    </Key>
+    <Property Name="flight_id" Type="bigint" Nullable="false" />
+    <Property Name="schedule_id" Type="int" Nullable="false" />
+    <Property Name="flight_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FlightStatus">
+    <Key>
+      <PropertyRef Name="flight_status" />
+    </Key>
+    <Property Name="flight_status" Type="int" Nullable="false" />
+    <Property Name="flight_status_desc" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pathway">
+    <Key>
+      <PropertyRef Name="pathway_id" />
+    </Key>
+    <Property Name="pathway_id" Type="int" Nullable="false" />
+    <Property Name="origin_id" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="dest_id" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="schedule_id" />
+    </Key>
+    <Property Name="schedule_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="t_arrive" Type="datetime" Nullable="false" />
+    <Property Name="t_depart" Type="datetime" Nullable="false" />
+    <Property Name="pathway_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SeatingPrice">
+    <Key>
+      <PropertyRef Name="seat_id" />
+    </Key>
+    <Property Name="seat_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="flight_id" Type="bigint" Nullable="false" />
+    <Property Name="aircraft_id" Type="bigint" Nullable="false" />
+    <Property Name="price_bit" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TravelClass">
+    <Key>
+      <PropertyRef Name="class_id" />
+    </Key>
+    <Property Name="class_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="descript" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_Aircraft_Flight_Aircrafts">
+    <End Role="Aircrafts" Type="Self.Aircrafts" Multiplicity="1" />
+    <End Role="Aircraft_Flight" Type="Self.Aircraft_Flight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aircrafts">
+        <PropertyRef Name="aircraft_id" />
+      </Principal>
+      <Dependent Role="Aircraft_Flight">
+        <PropertyRef Name="aircraft_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Aircraft_Flight_Flights">
+    <End Role="Flights" Type="Self.Flights" Multiplicity="1" />
+    <End Role="Aircraft_Flight" Type="Self.Aircraft_Flight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flights">
+        <PropertyRef Name="flight_id" />
+      </Principal>
+      <Dependent Role="Aircraft_Flight">
+        <PropertyRef Name="flight_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AircraftSeating_Aircrafts">
+    <End Role="Aircrafts" Type="Self.Aircrafts" Multiplicity="1" />
+    <End Role="AircraftSeating" Type="Self.AircraftSeating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aircrafts">
+        <PropertyRef Name="aircraft_id" />
+      </Principal>
+      <Dependent Role="AircraftSeating">
+        <PropertyRef Name="aircraft_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AircraftSeating_SeatingPrice">
+    <End Role="SeatingPrice" Type="Self.SeatingPrice" Multiplicity="1" />
+    <End Role="AircraftSeating" Type="Self.AircraftSeating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeatingPrice">
+        <PropertyRef Name="seat_id" />
+      </Principal>
+      <Dependent Role="AircraftSeating">
+        <PropertyRef Name="seat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AircraftSeating_TravelClass">
+    <End Role="TravelClass" Type="Self.TravelClass" Multiplicity="1" />
+    <End Role="AircraftSeating" Type="Self.AircraftSeating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TravelClass">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="AircraftSeating">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Airports_Pathway">
+    <End Role="Pathway" Type="Self.Pathway" Multiplicity="1" />
+    <End Role="Airports" Type="Self.Airports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pathway">
+        <PropertyRef Name="pathway_id" />
+      </Principal>
+      <Dependent Role="Airports">
+        <PropertyRef Name="pathway_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_Aircrafts">
+    <End Role="Aircrafts" Type="Self.Aircrafts" Multiplicity="1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aircrafts">
+        <PropertyRef Name="aircraft_id" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="aircraft_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="client_id" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_Flights">
+    <End Role="Flights" Type="Self.Flights" Multiplicity="1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flights">
+        <PropertyRef Name="flight_id" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="flight_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_SeatingPrice">
+    <End Role="SeatingPrice" Type="Self.SeatingPrice" Multiplicity="1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeatingPrice">
+        <PropertyRef Name="seat_id" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="seat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Airports">
+    <End Role="Airports" Type="Self.Airports" Multiplicity="1" />
+    <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Airports">
+        <PropertyRef Name="airport_id" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="airport_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flights_FlightStatus">
+    <End Role="FlightStatus" Type="Self.FlightStatus" Multiplicity="1" />
+    <End Role="Flights" Type="Self.Flights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlightStatus">
+        <PropertyRef Name="flight_status" />
+      </Principal>
+      <Dependent Role="Flights">
+        <PropertyRef Name="flight_status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flights_Schedule">
+    <End Role="Schedule" Type="Self.Schedule" Multiplicity="1" />
+    <End Role="Flights" Type="Self.Flights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="schedule_id" />
+      </Principal>
+      <Dependent Role="Flights">
+        <PropertyRef Name="schedule_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Pathway">
+    <End Role="Pathway" Type="Self.Pathway" Multiplicity="1" />
+    <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pathway">
+        <PropertyRef Name="pathway_id" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="pathway_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SeatingPrice_Aircrafts">
+    <End Role="Aircrafts" Type="Self.Aircrafts" Multiplicity="1" />
+    <End Role="SeatingPrice" Type="Self.SeatingPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aircrafts">
+        <PropertyRef Name="aircraft_id" />
+      </Principal>
+      <Dependent Role="SeatingPrice">
+        <PropertyRef Name="aircraft_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SeatingPrice_Flights">
+    <End Role="Flights" Type="Self.Flights" Multiplicity="1" />
+    <End Role="SeatingPrice" Type="Self.SeatingPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flights">
+        <PropertyRef Name="flight_id" />
+      </Principal>
+      <Dependent Role="SeatingPrice">
+        <PropertyRef Name="flight_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="horizonDBModelStoreContainer">
+    <EntitySet Name="Aircraft_Flight" EntityType="Self.Aircraft_Flight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Aircrafts" EntityType="Self.Aircrafts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AircraftSeating" EntityType="Self.AircraftSeating" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Airports" EntityType="Self.Airports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Booking" EntityType="Self.Booking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flights" EntityType="Self.Flights" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlightStatus" EntityType="Self.FlightStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pathway" EntityType="Self.Pathway" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SeatingPrice" EntityType="Self.SeatingPrice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TravelClass" EntityType="Self.TravelClass" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Aircraft_Flight_Aircrafts" Association="Self.FK_Aircraft_Flight_Aircrafts">
+      <End Role="Aircrafts" EntitySet="Aircrafts" />
+      <End Role="Aircraft_Flight" EntitySet="Aircraft_Flight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Aircraft_Flight_Flights" Association="Self.FK_Aircraft_Flight_Flights">
+      <End Role="Flights" EntitySet="Flights" />
+      <End Role="Aircraft_Flight" EntitySet="Aircraft_Flight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AircraftSeating_Aircrafts" Association="Self.FK_AircraftSeating_Aircrafts">
+      <End Role="Aircrafts" EntitySet="Aircrafts" />
+      <End Role="AircraftSeating" EntitySet="AircraftSeating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AircraftSeating_SeatingPrice" Association="Self.FK_AircraftSeating_SeatingPrice">
+      <End Role="SeatingPrice" EntitySet="SeatingPrice" />
+      <End Role="AircraftSeating" EntitySet="AircraftSeating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AircraftSeating_TravelClass" Association="Self.FK_AircraftSeating_TravelClass">
+      <End Role="TravelClass" EntitySet="TravelClass" />
+      <End Role="AircraftSeating" EntitySet="AircraftSeating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Airports_Pathway" Association="Self.FK_Airports_Pathway">
+      <End Role="Pathway" EntitySet="Pathway" />
+      <End Role="Airports" EntitySet="Airports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_Aircrafts" Association="Self.FK_Booking_Aircrafts">
+      <End Role="Aircrafts" EntitySet="Aircrafts" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_Clients" Association="Self.FK_Booking_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_Flights" Association="Self.FK_Booking_Flights">
+      <End Role="Flights" EntitySet="Flights" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_SeatingPrice" Association="Self.FK_Booking_SeatingPrice">
+      <End Role="SeatingPrice" EntitySet="SeatingPrice" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Airports" Association="Self.FK_Clients_Airports">
+      <End Role="Airports" EntitySet="Airports" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flights_FlightStatus" Association="Self.FK_Flights_FlightStatus">
+      <End Role="FlightStatus" EntitySet="FlightStatus" />
+      <End Role="Flights" EntitySet="Flights" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flights_Schedule" Association="Self.FK_Flights_Schedule">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="Flights" EntitySet="Flights" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Pathway" Association="Self.FK_Schedule_Pathway">
+      <End Role="Pathway" EntitySet="Pathway" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SeatingPrice_Aircrafts" Association="Self.FK_SeatingPrice_Aircrafts">
+      <End Role="Aircrafts" EntitySet="Aircrafts" />
+      <End Role="SeatingPrice" EntitySet="SeatingPrice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SeatingPrice_Flights" Association="Self.FK_SeatingPrice_Flights">
+      <End Role="Flights" EntitySet="Flights" />
+      <End Role="SeatingPrice" EntitySet="SeatingPrice" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
