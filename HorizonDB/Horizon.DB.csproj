@@ -49,18 +49,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aircraft.cs" />
+    <Compile Include="AircraftSeating.cs" />
+    <Compile Include="Aircraft_Flight.cs" />
+    <Compile Include="Airport.cs" />
+    <Compile Include="Booking.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="example.Context.cs" />
+    <Compile Include="example.cs" />
+    <Compile Include="example.Designer.cs">
+      <DependentUpon>example.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flight.cs" />
+    <Compile Include="FlightStatu.cs" />
     <Compile Include="Horizon.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Horizon.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Horizon.cs" />
     <Compile Include="Horizon.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Horizon.edmx</DependentUpon>
     </Compile>
+    <Compile Include="HorizonEDM.cs" />
+    <Compile Include="Pathway.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedule.cs" />
+    <Compile Include="SeatingPrice.cs" />
+    <Compile Include="sysdiagram.cs" />
+    <Compile Include="TravelClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

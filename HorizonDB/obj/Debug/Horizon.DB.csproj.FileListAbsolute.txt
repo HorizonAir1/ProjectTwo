@@ -1,2 +1,10 @@
-E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\obj\Debug\Horizon.DB.csprojResolveAssemblyReference.cache
+E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\bin\Debug\HorizonDB.dll.config
+E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\bin\Debug\HorizonDB.dll
+E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\bin\Debug\HorizonDB.pdb
+E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\bin\Debug\EntityFramework.dll
+E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\bin\Debug\EntityFramework.SqlServer.dll
+E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\bin\Debug\EntityFramework.xml
+E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\bin\Debug\EntityFramework.SqlServer.xml
 E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\obj\Debug\Horizon.DB.csproj.CoreCompileInputs.cache
+E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\obj\Debug\HorizonDB.dll
+E:\Revature\ProjectTwo\ProjectTwo\HorizonDB\obj\Debug\HorizonDB.pdb
