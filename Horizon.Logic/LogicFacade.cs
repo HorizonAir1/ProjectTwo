@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HorizonDB;
 
 namespace Horizon.Logic
 {
@@ -16,8 +17,8 @@ namespace Horizon.Logic
 
     public bool CancelFlight(string customerId, string flightId)
     {
-      throw new NotImplementedException();
-    }
+            throw new NotImplementedException();
+        }
 
     public bool ModifyFlight(string customerId, string flightId, string seatId)
     {

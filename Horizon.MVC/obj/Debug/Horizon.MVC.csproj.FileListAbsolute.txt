@@ -92,3 +92,5 @@ C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.MVC\obj\Debug\Horizon.MVC.csproj
 C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.MVC\obj\Debug\Horizon.MVC.csproj.CoreCompileInputs.cache
 C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.MVC\obj\Debug\Horizon.MVC.dll
 C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.MVC\obj\Debug\Horizon.MVC.pdb
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.MVC\obj\Debug\Horizon.MVC.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.MVC\obj\Debug\Horizon.MVC.csproj.CoreCompileInputs.cache

@@ -10,3 +10,5 @@ C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\obj\Debug\Horizon.Logic.cs
 C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\obj\Debug\Horizon.Logic.csproj.CoreCompileInputs.cache
 C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\obj\Debug\Horizon.Logic.dll
 C:\Users\Jaime Gonzalez\Desktop\Horizon\Horizon.Logic\obj\Debug\Horizon.Logic.pdb
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\obj\Debug\Horizon.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\obj\Debug\Horizon.Logic.csproj.CoreCompileInputs.cache

@@ -18,3 +18,14 @@ C:\Users\Jaime Gonzalez\Desktop\Horizon\HorizonDB\bin\Debug\EntityFramework.SqlS
 C:\Users\Jaime Gonzalez\Desktop\Horizon\HorizonDB\obj\Debug\Horizon.DB.csproj.CoreCompileInputs.cache
 C:\Users\Jaime Gonzalez\Desktop\Horizon\HorizonDB\obj\Debug\HorizonDB.dll
 C:\Users\Jaime Gonzalez\Desktop\Horizon\HorizonDB\obj\Debug\HorizonDB.pdb
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\bin\Debug\HorizonDB.dll.config
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\bin\Debug\HorizonDB.dll
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\bin\Debug\HorizonDB.pdb
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\bin\Debug\EntityFramework.dll
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\bin\Debug\EntityFramework.xml
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\obj\Debug\Horizon.DB.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\obj\Debug\Horizon.DB.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\obj\Debug\HorizonDB.dll
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\HorizonDB\obj\Debug\HorizonDB.pdb
