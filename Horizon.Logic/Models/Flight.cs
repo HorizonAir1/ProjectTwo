@@ -37,7 +37,7 @@ namespace Horizon.Logic.Abstracts
         db.SaveChanges();
       }
 
-      throw new NotImplementedException();
+      return true;
     }
 
     public static Flight GetFlight(string flightId)
@@ -57,3 +57,4 @@ namespace Horizon.Logic.Abstracts
 
   }
 }
+
