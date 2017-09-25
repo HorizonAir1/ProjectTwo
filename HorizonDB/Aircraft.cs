@@ -17,22 +17,16 @@ namespace HorizonDB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Aircraft()
         {
-            this.Aircraft_Flight = new HashSet<Aircraft_Flight>();
-            this.AircraftSeatings = new HashSet<AircraftSeating>();
-            this.Bookings = new HashSet<Booking>();
-            this.SeatingPrices = new HashSet<SeatingPrice>();
+            this.Flights = new HashSet<Flight>();
         }
     
-        public long aircraft_id { get; set; }
-        public string model { get; set; }
+        public int aircraft_id { get; set; }
+        public string producer { get; set; }
+        public int model_num { get; set; }
+        public int seat_actual { get; set; }
+        public int seat_max { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Aircraft_Flight> Aircraft_Flight { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AircraftSeating> AircraftSeatings { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Booking> Bookings { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SeatingPrice> SeatingPrices { get; set; }
+        public virtual ICollection<Flight> Flights { get; set; }
     }
 }

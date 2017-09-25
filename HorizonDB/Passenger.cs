@@ -12,19 +12,24 @@ namespace HorizonDB
     using System;
     using System.Collections.Generic;
     
-    public partial class TravelClass
+    public partial class Passenger
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TravelClass()
+        public Passenger()
         {
-            this.AircraftSeatings = new HashSet<AircraftSeating>();
+            this.Bookings = new HashSet<Booking>();
         }
     
-        public int class_id { get; set; }
-        public string name { get; set; }
-        public string descript { get; set; }
+        public int passenger_id { get; set; }
+        public string firstname { get; set; }
+        public string middle { get; set; }
+        public string lastname { get; set; }
+        public System.DateTime birth_date { get; set; }
+        public string address { get; set; }
+        public string tel_num { get; set; }
+        public string email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AircraftSeating> AircraftSeatings { get; set; }
+        public virtual ICollection<Booking> Bookings { get; set; }
     }
 }

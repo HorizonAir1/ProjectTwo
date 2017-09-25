@@ -12,15 +12,13 @@ namespace HorizonDB
     using System;
     using System.Collections.Generic;
     
-    public partial class AircraftSeating
+    public partial class Payment
     {
-        public long aircraft_id { get; set; }
-        public long seat_id { get; set; }
-        public int class_id { get; set; }
-        public int SeatRef { get; set; }
+        public int payment_id { get; set; }
+        public int booking_id { get; set; }
+        public decimal pay_amount { get; set; }
+        public byte[] pay_date { get; set; }
     
-        public virtual Aircraft Aircraft { get; set; }
-        public virtual SeatingPrice SeatingPrice { get; set; }
-        public virtual TravelClass TravelClass { get; set; }
+        public virtual Booking Booking { get; set; }
     }
 }

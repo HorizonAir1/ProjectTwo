@@ -17,22 +17,20 @@ namespace HorizonDB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Flight()
         {
-            this.Aircraft_Flight = new HashSet<Aircraft_Flight>();
             this.Bookings = new HashSet<Booking>();
-            this.SeatingPrices = new HashSet<SeatingPrice>();
         }
     
-        public long flight_id { get; set; }
-        public int schedule_id { get; set; }
-        public int flight_status { get; set; }
+        public int flight_id { get; set; }
+        public System.TimeSpan arrival_time { get; set; }
+        public System.DateTime arrival_date { get; set; }
+        public System.TimeSpan depart_time { get; set; }
+        public System.DateTime depart_date { get; set; }
+        public string destination { get; set; }
+        public string departure { get; set; }
+        public int aircraft_id { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Aircraft_Flight> Aircraft_Flight { get; set; }
+        public virtual Aircraft Aircraft { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Booking> Bookings { get; set; }
-        public virtual FlightStatu FlightStatu { get; set; }
-        public virtual Schedule Schedule { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SeatingPrice> SeatingPrices { get; set; }
     }
 }

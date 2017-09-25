@@ -13,10 +13,10 @@ namespace HorizonDB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class horizonDBEntity : DbContext
+    public partial class HorizonEntities : DbContext
     {
-        public horizonDBEntity()
-            : base("name=horizonDBEntity")
+        public HorizonEntities()
+            : base("name=HorizonEntities")
         {
         }
     
@@ -25,18 +25,13 @@ namespace HorizonDB
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Aircraft_Flight> Aircraft_Flight { get; set; }
-        public virtual DbSet<Aircraft> Aircrafts { get; set; }
-        public virtual DbSet<AircraftSeating> AircraftSeatings { get; set; }
-        public virtual DbSet<Airport> Airports { get; set; }
+        public virtual DbSet<Aircraft> Aircraft { get; set; }
         public virtual DbSet<Booking> Bookings { get; set; }
-        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<BookingStatu> BookingStatus { get; set; }
         public virtual DbSet<Flight> Flights { get; set; }
-        public virtual DbSet<FlightStatu> FlightStatus { get; set; }
-        public virtual DbSet<Pathway> Pathways { get; set; }
-        public virtual DbSet<Schedule> Schedules { get; set; }
-        public virtual DbSet<SeatingPrice> SeatingPrices { get; set; }
+        public virtual DbSet<Passenger> Passengers { get; set; }
+        public virtual DbSet<Payment> Payments { get; set; }
+        public virtual DbSet<SeatClass> SeatClasses { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<TravelClass> TravelClasses { get; set; }
     }
 }

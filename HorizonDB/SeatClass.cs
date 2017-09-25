@@ -12,22 +12,19 @@ namespace HorizonDB
     using System;
     using System.Collections.Generic;
     
-    public partial class Pathway
+    public partial class SeatClass
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Pathway()
+        public SeatClass()
         {
-            this.Airports = new HashSet<Airport>();
-            this.Schedules = new HashSet<Schedule>();
+            this.Bookings = new HashSet<Booking>();
         }
     
-        public int pathway_id { get; set; }
-        public string origin_id { get; set; }
-        public string dest_id { get; set; }
+        public int seatclass_id { get; set; }
+        public string desc { get; set; }
+        public int pricingTier { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Airport> Airports { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule> Schedules { get; set; }
+        public virtual ICollection<Booking> Bookings { get; set; }
     }
 }

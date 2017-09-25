@@ -14,15 +14,25 @@ namespace HorizonDB
     
     public partial class Booking
     {
-        public long booking_id { get; set; }
-        public long client_id { get; set; }
-        public long flight_id { get; set; }
-        public long aircraft_id { get; set; }
-        public long seat_id { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Booking()
+        {
+            this.Payments = new HashSet<Payment>();
+        }
     
-        public virtual Aircraft Aircraft { get; set; }
-        public virtual Client Client { get; set; }
+        public int booking_id { get; set; }
+        public int passenger_id { get; set; }
+        public int flight_id { get; set; }
+        public int seatclass_id { get; set; }
+        public int seat_number { get; set; }
+        public int baggage_num { get; set; }
+        public int status_id { get; set; }
+    
+        public virtual BookingStatu BookingStatu { get; set; }
         public virtual Flight Flight { get; set; }
-        public virtual SeatingPrice SeatingPrice { get; set; }
+        public virtual Passenger Passenger { get; set; }
+        public virtual SeatClass SeatClass { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Payment> Payments { get; set; }
     }
 }
