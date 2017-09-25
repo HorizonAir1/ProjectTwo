@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="HorizonModel.Passenger" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="HorizonModel.Payment" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="HorizonModel.SeatClass" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="HorizonModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorizonModel.sysdiagram" Width="1.5" PointX="7.25" PointY="5.125" IsExpanded="true" />
         <AssociationConnector Association="HorizonModel.FK_Flight_Aircraft" ManuallyRouted="false" />
         <AssociationConnector Association="HorizonModel.FK_Booking_BookingStatus" ManuallyRouted="false" />
         <AssociationConnector Association="HorizonModel.FK_Booking_Flight" ManuallyRouted="false" />

@@ -29,7 +29,7 @@ namespace Horizon.Logic
       throw new NotImplementedException();
     }
 
-    public bool RegisterToFlight(ICustomer customer, string flightId)
+    public bool RegisterToFlight(Passenger passenger, string flightId)
     {
       throw new NotImplementedException();
     }
