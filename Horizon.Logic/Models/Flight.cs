@@ -63,36 +63,22 @@ namespace Horizon.Logic.Models
       throw new NotImplementedException();
     }
 
-    public static List<string> GetAllDestLocs()
+    public static List<string> GetAllFlightDestinationsAndArrivals()
     {
-      List<string> allDestinations = new List<string>();
+      List<string> allDestAndDep = new List<string>();
 
       using (var db = new HorizonEntities())
       {
         foreach (var item in db.Flights)
         {
-          if (!allDestinations.Contains(item.destination))
-            allDestinations.Add(item.destination);
+          if (!allDestAndDep.Contains(item.destination))
+            allDestAndDep.Add(item.destination);
+          if (!allDestAndDep.Contains(item.departure))
+            allDestAndDep.Add(item.departure);
         }
       }
 
-      return allDestinations;
-    }
-    
-    public static List<string> GetAllDepartLocs()
-    {
-      List<string> allDepartures = new List<string>();
-
-      using (var db = new HorizonEntities())
-      {
-        foreach (var item in db.Flights)
-        {
-          if (!allDepartures.Contains(item.departure))
-            allDepartures.Add(item.departure);
-        }
-      }
-
-      return allDepartures;
+      return allDestAndDep;
     }
 
     public List<string> GetAvailableSeats()
