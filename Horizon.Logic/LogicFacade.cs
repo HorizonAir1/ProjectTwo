@@ -24,7 +24,12 @@ namespace Horizon.Logic
       throw new NotImplementedException();
     }
 
-    public bool RegisterToFlight(string customerId, string flightId)
+        public void flightDestinationAndArrival(Horizon.MVC.Models.Flight flight)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RegisterToFlight(string customerId, string flightId)
     {
       throw new NotImplementedException();
     }
