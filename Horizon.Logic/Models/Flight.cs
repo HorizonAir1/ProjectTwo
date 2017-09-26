@@ -65,12 +65,34 @@ namespace Horizon.Logic.Models
 
     public static List<string> GetAllDestLocs()
     {
+      List<string> allDestinations = new List<string>();
 
+      using (var db = new HorizonEntities())
+      {
+        foreach (var item in db.Flights)
+        {
+          if (!allDestinations.Contains(item.destination))
+            allDestinations.Add(item.destination);
+        }
+      }
+
+      return allDestinations;
     }
     
     public static List<string> GetAllDepartLocs()
     {
+      List<string> allDepartures = new List<string>();
 
+      using (var db = new HorizonEntities())
+      {
+        foreach (var item in db.Flights)
+        {
+          if (!allDepartures.Contains(item.departure))
+            allDepartures.Add(item.departure);
+        }
+      }
+
+      return allDepartures;
     }
 
     public List<string> GetAvailableSeats()
