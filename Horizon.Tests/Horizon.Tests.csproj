@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4C5037D6-D5A3-4E3A-ADF3-72A05D50FA96}</ProjectGuid>
+    <ProjectGuid>{8390D8A9-DF38-42B2-8614-C7887F6ADC80}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Horizon.Logic</RootNamespace>
-    <AssemblyName>Horizon.Logic</AssemblyName>
+    <RootNamespace>Horizon.Tests</RootNamespace>
+    <AssemblyName>Horizon.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -59,19 +59,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogicFacade.cs" />
-    <Compile Include="Interfaces\ICustomer.cs" />
-    <Compile Include="Models\Passenger.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HorizonDB\Horizon.DB.csproj">
-      <Project>{70f22b84-c853-44a7-ab7c-73b16544a9dd}</Project>
-      <Name>Horizon.DB</Name>
-    </ProjectReference>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Horizon.Logic\Horizon.Logic.csproj">
+      <Project>{4c5037d6-d5a3-4e3a-adf3-72a05d50fa96}</Project>
+      <Name>Horizon.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

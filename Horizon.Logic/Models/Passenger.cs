@@ -8,14 +8,24 @@ namespace Horizon.Logic.Models
 {
     public class Passenger
     {
-        public bool cancelFly(int y )
+        public static bool cancelFly(int y,int z )
         {
             using (var db = new HorizonEntities())
             {
-               Booking cancelB = db.Bookings.Single(x => x.Passenger.passenger_id == y);
+                Booking cancelB = new Booking();
+                foreach(var i in db.Bookings)
+                {
+                    if((i.passenger_id == y) && (i.flight_id == z))
+                    {
+                        cancelB = i;
+                        break;
+                    }
+                }
+          
                if(cancelB != null)
                 {
-                    cancelB.status_id = 2;
+                    // status_id 4.booked 5.CANCEL 6. ERROR
+                    cancelB.status_id = 4 ;
                     db.SaveChanges();
                     return true;
                 }
@@ -23,7 +33,7 @@ namespace Horizon.Logic.Models
                 return false;
             }
         }
-        public bool modifyFly(int user , int flight , int seat )
+        public static bool modifyFly(int user , int flight , int seat )
         {
             using (var db = new HorizonEntities())
             {

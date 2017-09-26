@@ -23,3 +23,11 @@ C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\EntityFramewo
 C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\obj\Debug\Horizon.Logic.dll
 C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\obj\Debug\Horizon.Logic.pdb
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\xunit.abstractions.dll
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\xunit.assert.dll
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\xunit.core.dll
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\xunit.abstractions.xml
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\xunit.assert.xml
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\xunit.core.xml
+C:\Users\Jaime Gonzalez\Desktop\ProjectTwo\Horizon.Logic\bin\Debug\xunit.execution.desktop.xml
