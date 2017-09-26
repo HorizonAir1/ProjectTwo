@@ -9,19 +9,14 @@ namespace Horizon.Logic
 {
   public class LogicFacade
   {
-    public List<List<string>> GetAllFlights(string startLoc, string destLoc, DateTime startSearch, DateTime endSearch, int numPassengers)
+    public bool CancelFlight(int user, int flightId)
     {
-      throw new NotImplementedException();
+      return Passenger.cancelFly(user, flightId);
     }
 
-    public bool CancelFlight(string customerId, string flightId)
+    public bool ModifyFlight(int user, int flightId, int seat)
     {
-      throw new NotImplementedException();
-    }
-
-    public bool ModifyFlight(string customerId, string flightId, string seatId)
-    {
-      throw new NotImplementedException();
+      return Passenger.modifyFly(user, flightId, seat)
     }
 
     public bool RegisterToFlight(string customerId, string flightId)
