@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Horizon.Logic.Abstracts
+namespace Horizon.Logic.Models
 {
   public class Flight
   {
@@ -30,11 +30,6 @@ namespace Horizon.Logic.Abstracts
     }
 
     public static Flight GetFlight(string flightId)
-    {
-      throw new NotImplementedException();
-    }
-
-    public List<string> ToList()
     {
       throw new NotImplementedException();
     }

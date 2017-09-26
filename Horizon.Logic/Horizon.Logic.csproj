@@ -50,6 +50,7 @@
     <Compile Include="Models\Flight.cs" />
     <Compile Include="LogicFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\FlightTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HorizonDB\Horizon.DB.csproj">
