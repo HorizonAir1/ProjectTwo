@@ -38,5 +38,10 @@ namespace Horizon.Logic
     {
       return Flight.GetAllFlightDestinations();
     }
+
+    public List<List<string>> GetAllFlights()
+    {
+      return Flight.GetAllFlights()l;
+    }
   }
 }
