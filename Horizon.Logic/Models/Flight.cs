@@ -63,6 +63,16 @@ namespace Horizon.Logic.Models
       throw new NotImplementedException();
     }
 
+    public static List<string> GetAllDestLocs()
+    {
+
+    }
+    
+    public static List<string> GetAllDepartLocs()
+    {
+
+    }
+
     public List<string> GetAvailableSeats()
     {
       throw new NotImplementedException();
