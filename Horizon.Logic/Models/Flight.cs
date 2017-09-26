@@ -9,7 +9,7 @@ namespace Horizon.Logic.Abstracts
 {
   public class Flight
   {
-    public bool BookPassenger(int passenger_id, int FlightId, int seatClass,  int seatNumber)
+    public bool BookPassenger(int passenger_id, int FlightId, int seatClass,  int seatNumber, int numBags)
     {
       using (var db = new HorizonEntities())
       {
@@ -19,7 +19,7 @@ namespace Horizon.Logic.Abstracts
           flight_id = FlightId,
           seatclass_id= seatClass,
           seat_number = seatNumber,
-          baggage_num = 0,
+          baggage_num = numBags,
           status_id= 1,
         };
         db.Bookings.Add(addB);
