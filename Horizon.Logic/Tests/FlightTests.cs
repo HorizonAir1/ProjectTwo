@@ -35,5 +35,11 @@ namespace Horizon.Logic.Tests
     {
       Assert.True(true);
     }
+
+    [Fact]
+    public void GetDestsAndArrivalTests()
+    {
+      Assert.True(true);
+    }
   }
 }
