@@ -19,14 +19,9 @@ namespace Horizon.Logic
       return Passenger.modifyFly(user, flightId, seat)
     }
 
-    public bool RegisterToFlight(string customerId, string flightId)
+    public bool BookToFlight()
     {
-      throw new NotImplementedException();
-    }
 
-    public bool RegisterToFlight(ICustomer customer, string flightId)
-    {
-      throw new NotImplementedException();
     }
 
     public List<string>() GetAllFlightDestinations()
