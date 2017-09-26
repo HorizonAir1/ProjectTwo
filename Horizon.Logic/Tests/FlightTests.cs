@@ -28,17 +28,23 @@ namespace Horizon.Logic.Tests
       }
       var actual = aftercount == initcount + 1;
       Assert.True(actual);
+
+      //test booking for seats
     }
 
     [Fact]
     public void GetAllFlightsTest()
     {
+      //add flight data
+      //check flights to see if flight is in flights list
       Assert.True(true);
     }
 
     [Fact]
     public void GetDestsAndArrivalTests()
     {
+      //add dest /arrival 
+      //check dests and arrivals to see if dest is in 
       Assert.True(true);
     }
   }
