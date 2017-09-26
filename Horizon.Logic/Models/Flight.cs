@@ -9,7 +9,7 @@ namespace Horizon.Logic.Models
 {
   public class Flight
   {
-    public bool BookPassenger(int passenger_id, int FlightId, int seatClass,  int seatNumber, int numBags)
+    public static bool BookPassenger(int passenger_id, int FlightId, int seatClass,  int seatNumber, int numBags)
     {
       using (var db = new HorizonEntities())
       {
