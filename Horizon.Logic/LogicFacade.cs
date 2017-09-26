@@ -33,5 +33,10 @@ namespace Horizon.Logic
     {
       throw new NotImplementedException();
     }
+
+    public List<string>() GetAllFlightDestinations()
+    {
+      return Flight.GetAllFlightDestinations();
+    }
   }
 }
