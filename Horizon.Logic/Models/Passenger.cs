@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using HorizonDB;
 namespace Horizon.Logic.Models
 {
-    class Passenger
+    public class Passenger
     {
-        public void cancelFly(int y )
+        public bool cancelFly(int y )
         {
             using (var db = new HorizonEntities())
             {
@@ -16,11 +16,14 @@ namespace Horizon.Logic.Models
                if(cancelB != null)
                 {
                     cancelB.status_id = 2;
+                    db.SaveChanges();
+                    return true;
                 }
-                db.SaveChanges();
+                
+                return false;
             }
         }
-        public void modifyFly(int user , int flight , int seat )
+        public bool modifyFly(int user , int flight , int seat )
         {
             using (var db = new HorizonEntities())
             {
@@ -29,8 +32,10 @@ namespace Horizon.Logic.Models
                 {
                     cancelB.Flight.flight_id = flight;
                     cancelB.seat_number = seat;
+                    db.SaveChanges();
+                    return true;
                 }
-                db.SaveChanges();
+                return false;
                 
             }
         }

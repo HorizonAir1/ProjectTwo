@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HorizonDB"
+    "\\Horizon.Logic",
+    "\\Horizon.Logic\\Models",
+    "\\Horizon.Test"
   ],
-  "SelectedNode": "\\HorizonDB\\Properties",
+  "SelectedNode": "\\Horizon.Test\\UnitTest1.cs",
   "PreviewInSolutionExplorer": false
 }
