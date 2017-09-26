@@ -58,9 +58,9 @@ namespace Horizon.Logic.Models
           }
           
         }
-        return allFlights;
+        
       }
-      throw new NotImplementedException();
+      return allFlights;
     }
 
     public static List<string> GetAllFlightDestinationsAndArrivals()
