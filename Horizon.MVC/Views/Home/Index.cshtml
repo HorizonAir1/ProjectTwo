@@ -8,69 +8,72 @@
 <hr>
 
 
-@*<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div class="jumbotron">
+    @*<h1>ASP.NET</h1>
+            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+            <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>*@
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Getting started</h2>
+                <p>
+                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                    enables a clean separation of concerns and gives you full control over markup
+                    for enjoyable, agile development.
+                </p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Get more libraries</h2>
+                <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Web Hosting</h2>
+                <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            </div>
+    *@
 
-<div class="row">
-    <div class="col-md-4">
-        <form for="Flight" method="post">
-            <div class="form-group">
-                <select name="Destination" size="10" class="selectpicker form-control">
-                    <option value="" selected>Departing From</option>
-                    @foreach (var departure in Model)
-                    {
-                        <option value="@departure.Departure">@departure.Departure</option>
-                    }
-                </select>
-            </div>
-            <div class="form-group">
-                <select name="Destination" size="10" class="selectpicker form-control">
-                    <option value="" selected>Departing From</option>
-                    @foreach (var arrival in Model)
-                    {
-                        <option value="@arrival.Destination">@arrival.Destination</option>
-                    }
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="DepartureDate" class="control-label">Departure Date:</label>
-                <input type="date" name="DepartureDate" class="form-control input-sm" />
-                <span for="DepartureDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label for="ArrivalDate" class="control-label">Arrival Date:</label>
-                <input type="date" name="ArrivalDate" class="form-control input-sm" />
-                <span for="ArrivalDate" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </form>
+    <div class="row">
+        <div class="col-md-3">
+            <form for="Flight" method="post">
+                <label for="Destination" class="control-label">Departure</label>
+                <div class="form-group">
+                    <select name="Destination" size="1" class="selectpicker form-control">
+                        <option value="" selected>Departure</option>
+                        @foreach (var departure in Model)
+                        {
+                            <option value="@departure.Departure">@departure.Departure</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Arrival" class="control-label">Arrival:</label>
+                    <select name="Destination" size="1" class="selectpicker form-control">
+                        <option value="" selected>Arriving</option>
+                        @foreach (var arrival in Model)
+                        {
+                            <option value="@arrival.Destination">@arrival.Destination</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="DepartureDate" class="control-label">Departure Date:</label>
+                    <input type="date" name="DepartureDate" class="form-control input-sm" />
+                    <span for="DepartureDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="ArrivalDate" class="control-label">Arrival Date:</label>
+                    <input type="date" name="ArrivalDate" class="form-control input-sm" />
+                    <span for="ArrivalDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Search" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
     </div>
 </div>

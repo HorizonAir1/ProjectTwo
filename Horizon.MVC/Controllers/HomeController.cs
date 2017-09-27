@@ -40,5 +40,20 @@ namespace Horizon.MVC.Controllers
 
             return View();
         }
+
+        public ActionResult AvailableFlights(string startLoc, string destLoc, DateTime startSearch, DateTime endSearch, int numberOFPassengers)
+        {
+            //IEnumerable<Booking> bookings = book.GetAllFlights(startLoc, destLoc, startSearch, endSearch, numberOFPassengers);
+
+            return View(bookings);
+        }
+
+        public ActionResult BookingInfo()
+        {
+            IEnumerable<Booking> booking = new List<Booking>();
+
+            return View(booking);
+        }
+
     }
 }
