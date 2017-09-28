@@ -3,8 +3,9 @@
     "",
     "\\Horizon.Logic",
     "\\Horizon.Logic\\Models",
-    "\\Horizon.Test"
+    "\\Horizon.Tests",
+    "\\HorizonDB"
   ],
-  "SelectedNode": "\\Horizon.Test\\UnitTest1.cs",
+  "SelectedNode": "\\Horizon.Tests\\App.config",
   "PreviewInSolutionExplorer": false
 }
